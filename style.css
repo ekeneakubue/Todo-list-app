@@ -1,0 +1,156 @@
+/* Global Styling */
+*{
+    box-sizing: border-box;
+}
+:root{
+    --border-line: #8d8a8a;
+    --Background-white: #d1c9c9;
+    --pure-white: #fff;
+    --text-blue: rgb(6, 6, 36);
+    --logo-span: #f60505;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--Background-white);
+    color: var(--text-blue);
+}
+
+/* header styling */
+header{    
+    padding: 1rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.logo{
+    width: 30%;
+    font-size: 30px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.add{
+    height: 30px;
+    width: 70%;
+    display: flex;
+    justify-content: end;
+}
+.add input{
+    padding: 0rem 2rem;
+    width: 80%;
+    font-size: 16px;   
+    border-radius: 30px 0px 0px 30px; 
+    border: 1px solid var(--border-line);
+}
+.add button{
+    width: 20%;
+    background-color: var(--logo-span);
+    color: var(--Background-white);
+    font-size: 16px;
+    border-radius: 0px 30px 30px 0px;
+    border: 1px solid var(--logo-span);
+}
+.logo span{
+    color: var(--logo-span);
+}
+::placeholder{
+    font-size: 16px;
+}
+
+/* Main Styling */
+main{
+    min-height: 70vh;
+    padding:2rem 10rem;    
+    color: var(--text-blue);
+    
+}
+main h3{
+    padding: 1rem 0rem;
+}
+.redd{
+    border-radius: 10px;
+}
+ul{
+    padding-left: 0px;
+}
+
+ul li{  
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 10px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 10px;
+}
+ul li.checked{
+    color:var(--border-line);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem ; 
+}
+
+
+/* Footer Styling */
+footer{
+    color: var(--text-blue);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+@media(max-width: 667px){
+    header{    
+        padding: 2rem 0.1rem;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    .add{
+        height: 30px;
+        width: 90%;
+    }
+    .add input{
+        width: 70%;
+    }
+    .add button{
+        width: 30%;
+        color: var(--Background-white);
+    }
+    main{
+        padding: 0rem 1rem;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+    main h3{
+        padding: 0.1rem 0rem;
+    }
+    footer{
+        text-align: center;
+    }
+}
