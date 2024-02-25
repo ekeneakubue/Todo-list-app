@@ -14,23 +14,23 @@
     </head>
     <body>
         <header>
-            <div class="logo">Todo<span>APP</span></div>
-            <div class="add">
-                <input type="text" placeholder="Enter Your Todo" id="input-box">
-                <button onclick="addTask()">Add</button>
-            </div>
+            <div class="logo">Todo<span>APP</span></div>            
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Enter Task">
+                <button type="submit" id="add-button">Add</button>
+            </form>
         </header>
 
         <main>
-            <h3>10 Items</h3>  
-            <ul id="list-container">                    
-                <!-- <li class="checked">task1</li> 
-                <li>task2</li>                                   -->
-            </ul>
-
-
-
-            
+            <div class="todo-container">
+                <ul id="task-list">                    
+                    <!-- <li class="task-item">
+                        <span class="task-content">Task</span>
+                        <button id="edit">Edit</button>
+                        <button id="delete">Delete</button>
+                    </li>                                 -->
+                </ul>
+            </div>         
         </main>        
         
         <footer>&copy; Copyright 2024 All right reserved. | Designed by Ekene Akubue</footer>
